@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
+    dataBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.planatech.salarytracker"
         minSdkVersion 23
@@ -31,4 +33,16 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    //firebase auth
+    implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+
+    //jetpack libraries
+    implementation "androidx.lifecycle:lifecycle-extensions:$jetpack_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$jetpack_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$jetpack_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$jetpack_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$jetpack_version"
+
 }
