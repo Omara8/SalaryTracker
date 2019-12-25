@@ -15,6 +15,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resValue "string", "FACEBOOK_APP_ID", FACEBOOK_APP_ID
+        resValue "string", "FB_LOGIN_PROTOCOL_SCHEME", FB_LOGIN_PROTOCOL_SCHEME
     }
     buildTypes {
         release {

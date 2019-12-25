@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Salary Tracker</string>
-    <string name="facebook_application_id">579992882790123</string>
-    <string name="fb_login_protocol_scheme">fb579992882790123</string>
+    <string name="facebook_application_id">@string/FACEBOOK_APP_ID</string>
+    <string name="fb_login_protocol_scheme">@string/FB_LOGIN_PROTOCOL_SCHEME</string>
 </resources>
