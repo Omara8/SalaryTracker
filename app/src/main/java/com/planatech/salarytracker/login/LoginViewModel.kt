@@ -1,4 +1,4 @@
-package com.planatech.salarytracker
+package com.planatech.salarytracker.login
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

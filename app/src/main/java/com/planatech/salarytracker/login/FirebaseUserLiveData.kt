@@ -1,4 +1,4 @@
-package com.planatech.salarytracker
+package com.planatech.salarytracker.login
 
 import androidx.lifecycle.LiveData
 import com.google.firebase.auth.FirebaseAuth

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.planatech.salarytracker.MainFragment"
+        android:name="com.planatech.salarytracker.home.MainFragment"
         android:label="MainFragment">
     </fragment>
 </navigation>

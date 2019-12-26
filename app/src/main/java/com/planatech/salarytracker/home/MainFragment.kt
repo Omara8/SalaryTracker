@@ -1,4 +1,4 @@
-package com.planatech.salarytracker
+package com.planatech.salarytracker.home
 
 import android.app.Activity
 import android.content.Intent
@@ -17,6 +17,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.planatech.salarytracker.databinding.FragmentMainBinding
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
+import com.planatech.salarytracker.R
+import com.planatech.salarytracker.login.LoginViewModel
 
 
 class MainFragment : Fragment() {
@@ -35,7 +37,8 @@ class MainFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_main, container, false)
         binding.loginButton.text = "Login"
         return binding.root
     }
@@ -54,7 +57,10 @@ class MainFragment : Fragment() {
         startActivityForResult(
             AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(
                 providers
-            ).build(), SIGN_IN_RESULT_CODE
+            ).setLogo(R.mipmap.ic_logo_foreground)
+                .setTheme(R.style.AppThemeWithActionBar)
+                .build(),
+            SIGN_IN_RESULT_CODE
         )
     }
 
